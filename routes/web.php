@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/index', '\App\Http\Controllers\Home\Index@index');
