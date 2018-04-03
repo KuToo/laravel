@@ -1,9 +1,9 @@
 <?php 
-namespace libs\neteaseim\mothods;
+namespace libs\neteaseim\methods;
 /**
 * 用户操作类
 */
-class User extends AnotherClass
+class User
 {
     
     private $SendRequest;
@@ -49,10 +49,10 @@ class User extends AnotherClass
             'icon'  => $icon,
             'token' => $token
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -73,10 +73,10 @@ class User extends AnotherClass
             'props' => $props,
             'token' => $token
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -91,10 +91,10 @@ class User extends AnotherClass
         $data= array(
             'accid' => $accid
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -110,10 +110,10 @@ class User extends AnotherClass
         $data= array(
             'accid' => $accid
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -145,10 +145,10 @@ class User extends AnotherClass
             'gender' => $gender,
             'ex' => $ex
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -163,10 +163,10 @@ class User extends AnotherClass
         $data= array(
             'accids' => json_encode($accids)
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -187,10 +187,10 @@ class User extends AnotherClass
             'type' => $type,
             'msg' => $msg
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -209,10 +209,10 @@ class User extends AnotherClass
             'faccid' => $faccid,
             'alias' => $alias
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -228,10 +228,10 @@ class User extends AnotherClass
             'accid' => $accid,
             'createtime' => (string)(time()*1000)
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }
@@ -248,10 +248,10 @@ class User extends AnotherClass
             'accid' => $accid,
             'faccid' => $faccid
         );
-        if($this->RequestType=='curl'){
-            $result = $this->postDataCurl($url,$data);
+        if($this->SendRequest->RequestType=='curl'){
+            $result = $this->SendRequest->postDataCurl($url,$data);
         }else{
-            $result = $this->postDataFsockopen($url,$data);
+            $result = $this->SendRequest->postDataFsockopen($url,$data);
         }
         return $result;
     }

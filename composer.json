@@ -21,7 +21,9 @@
     "autoload": {
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "libs/neteaseim",
+            "libs/neteaseim/methods"
         ],
         "psr-4": {
             "App\\": "app/"
@@ -29,7 +31,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Nim\\": "libs/netease/",
+            "Im\\": "libs/netease/methods/"
         }
     },
     "extra": {

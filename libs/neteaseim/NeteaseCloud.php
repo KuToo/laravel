@@ -6,7 +6,7 @@
  * 
  * v2.0.1
  */
-namespace Plug\rongcloud;
+namespace libs\neteaseim;
 
 use libs\neteaseim\SendRequest;
 use libs\neteaseim\methods\User;
