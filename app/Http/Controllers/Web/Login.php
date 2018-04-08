@@ -34,11 +34,11 @@ class Login extends Controller
 
     }
 
-    public function tologin(Request $data)
+    public function tologin(Request $request)
     {
         $this->validate($request,[
             'username'=>'required|max:255',
-            'password'=>'required|min:6',
+            'password'=>'required|min:6'
         ]);
         $name=$request->input('username');
         $password=$request->input('password');
@@ -53,6 +53,16 @@ class Login extends Controller
                 $query->where('tel', $name)->where('password', md5($password));
 
             })->get();
-        return empty($user) ? 0 : 1 ;
+        if(empty($user)){
+            return 0;
+        }else{
+            $res=;
+        }
+    }
+
+
+    public function logout()
+    {
+        session(['user'=>null]);
     }
 }
