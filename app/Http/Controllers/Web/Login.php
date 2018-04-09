@@ -38,31 +38,27 @@ class Login extends Controller
     {
         $this->validate($request,[
             'username'=>'required|max:255',
-            'password'=>'required|min:6'
+            'password'=>'required|min:6',
         ]);
         $name=$request->input('username');
         $password=$request->input('password');
 
-        $user=DB::table('users')
-            ->where(function($query){
-
-                $query->where('name',$name)->where('password',md5($password));
-
-            })->orWhere(function($query){
-
-                $query->where('tel', $name)->where('password', md5($password));
-
-            })->get();
-        if(empty($user)){
-            return 0;
-        }else{
-            $res=;
-        }
+//        $user=DB::table('users')
+//            ->where(function($query){
+//
+//                $query->where('name',$name)->where('password',md5($password));
+//
+//            })->orWhere(function($query){
+//
+//                $query->where('tel', $name)->where('password', md5($password));
+//
+//            })->get();
+//        if(empty($user)){
+//            return 0;
+//        }else{
+//            $res=;
+//        }
     }
 
 
-    public function logout()
-    {
-        session(['user'=>null]);
-    }
 }

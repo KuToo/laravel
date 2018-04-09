@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -23,24 +24,12 @@
                 <ul><!--v-for-start-->
                     <li>
                         <img class="avatar" width="30" height="30" alt="示例介绍" src="images/2.png">
-                        <p class="name">消息</p>
+                        <div class="msg-text">
+                            <p class="name">消息</p>
+                            <p class="msg">消息</p>
+                        </div>
                     </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="images/3.jpg">
-                        <p class="name">朋友</p>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="images/3.jpg">
-                        <p class="name">群组</p>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="images/3.jpg">
-                        <p class="name">直播</p>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="images/3.jpg">
-                        <p class="name">系统</p>
-                    </li><!--v-for-end-->
+
                 </ul>
             </div><!--message-component-->
 
@@ -122,8 +111,32 @@
     <script src="plug/nim/NIM_Web_NIM_v5.0.0.js"></script>
     <script src="js/common/jquery-3.3.1.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
+
+
+        // function connectSDK () {
+        //     window.nim = NIM.getInstance({
+        //         debug: false,
+        //         appKey: "214d34cfe8e1ba09e872bcbcda509109",
+        //         account: '4',
+        //         token: 'a5cc338605f25f848d6048b552d13c66',
+        //         onconnect: function () {
+        //             console.log('连接成功')
+        //         },
+        //         ondisconnect: function (obj) {
+        //             console.log('断开连接')
+        //
+        //         },
+        //         onerror: function (error) {
+        //             console.log(error)
+        //         }
+        //     });
+        // }
+        //
+        // connectSDK();
+
 
         var data = {};
         var nim = NIM.getInstance({
@@ -474,11 +487,6 @@
         function onSyncDone() {
             console.log('同步完成');
         }
-
-        // 清除实例
-        nim.destroy()
-
-
     </script>
 </body>
 </html>

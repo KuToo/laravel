@@ -19,4 +19,9 @@ class Index extends BaseController
     {
         return view('index.main');
     }
+
+    public function getAvatars()
+    {
+        return 111;
+    }
 }

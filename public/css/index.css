@@ -32,8 +32,11 @@ p {display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-m
 .m-list{display:none}
 .m-list li.active {background-color: hsla(0,0%,100%,.1);}
 .m-list .avatar {border-radius: 2px;vertical-align: middle;}
-.m-list li {padding: 9px 15px;border-bottom: 1px solid #292c33;cursor: pointer;-webkit-transition: background-color .1s;transition: background-color .1s;}
-.m-list .name {display: inline-block;margin-left:15px;vertical-align: middle;}
+.m-list li {padding: 5px 10px;height:40px;border-bottom: 1px solid #292c33;cursor: pointer;-webkit-transition: background-color .1s;transition: background-color .1s;}
+.m-list .avatar{float:left;}
+.m-list .msg-text{float:left;margin-left:10px;}
+.m-list .msg-text .name {height:20px;padding:0;margin:0;font-size:16px;}
+.m-list .msg-text .msg {height:10px;padding:0;margin:0;font-size:10px;}
 
 #chat .main { height: 100%;position: relative;overflow: hidden;background-color: #eee;}
 #chat .m-message {height: calc(100% - 10pc);}

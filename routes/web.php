@@ -23,3 +23,4 @@ Route::post('/checkname', '\App\Http\Controllers\Web\Login@checkname');
 
 Route::get('/index', '\App\Http\Controllers\Web\Index@index');
 Route::get('/main', '\App\Http\Controllers\Web\Index@main');
+Route::post('/getavatars', '\App\Http\Controllers\Web\User@getAvatars');
